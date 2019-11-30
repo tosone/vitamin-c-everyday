@@ -22,7 +22,7 @@ RUN tar xf ${VERSION}.tar.gz && cd vcpkg-${VERSION} && ./bootstrap-vcpkg.sh && \
   ./vcpkg install ${DEPS} && \
   ./vcpkg list && ./vcpkg export ${DEPS} --raw --output=pkgs && \
   mv pkgs .. && cd .. && \
-  rm -rf vcpkg-${VERSION} ${VERSION}.tar.gz pkgs.zip
+  rm -rf vcpkg-${VERSION} ${VERSION}.tar.gz
 
 VOLUME /app/learnc
 
