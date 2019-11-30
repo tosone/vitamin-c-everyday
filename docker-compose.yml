@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  learnc:
+    image: learnc:dev
+    container_name: learnc
+    hostname: learnc
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - $PWD:/app/learnc
+    tty: true
