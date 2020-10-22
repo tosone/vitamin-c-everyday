@@ -1,4 +1,4 @@
-CFLAGS  = -I../../../pkgs/installed/x64-linux/include -L../../../pkgs/installed/x64-linux/lib
+CFLAGS  += 
 
 CFiles = $(wildcard *.c)
 
@@ -9,7 +9,7 @@ c: $(CFiles)
 $(CFiles):
 	@echo Running `echo $@ | cut -d. -f1`:
 	@echo
-	@$(CC) $(CFLAGS) -std=c99 -Os -g3 -Wall -fsanitize=address,signed-integer-overflow \
+	@$(CC) $(CFLAGS) -std=c99 -Os -g3 -Wall \
 	-o `echo $@ | cut -d. -f1`.test $@ $(LDFLAGS)
 	@./`echo $@ | cut -d. -f1`.test
 	@$(RM) -rf `echo $@ | cut -d. -f1`.test *.dSYM

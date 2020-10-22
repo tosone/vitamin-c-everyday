@@ -1,2 +1,0 @@
-pkgs/installed/x64-linux/debug/lib/libuuid.a filter=lfs diff=lfs merge=lfs -text
-pkgs/installed/x64-linux/lib/libuuid.a filter=lfs diff=lfs merge=lfs -text

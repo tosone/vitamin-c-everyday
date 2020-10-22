@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.8"
 
 services:
   learnc:
@@ -10,5 +10,5 @@ services:
       dockerfile: Dockerfile
     restart: always
     volumes:
-      - $PWD:/app/learnc
+      - $PWD:/app
     tty: true
